@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eastern Garden Chinese Restaurant | Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #faf8f3;
+      --gold: #d4af37;
+      --gold-dark: #b8941f;
+      --charcoal: #2c2c2c;
+      --gray: #6b6b6b;
+      --light-gold: #f5ead6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--charcoal);
+      background:
+        linear-gradient(180deg, rgba(250, 248, 243, 0.95) 0%, rgba(245, 242, 235, 0.95) 50%, rgba(250, 248, 243, 0.95) 100%),
+        url('https://images.unsplash.com/photo-1525755662778-989d0524087e?w=1600&q=80'),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><defs><filter id="blur"><feGaussianBlur stdDeviation="3"/></filter></defs><g opacity="0.03" filter="url(%23blur)"><circle cx="150" cy="150" r="80" fill="%23d4af37"/><circle cx="650" cy="200" r="60" fill="%23d4af37"/><circle cx="400" cy="400" r="100" fill="%23d4af37"/><circle cx="200" cy="600" r="70" fill="%23d4af37"/><circle cx="700" cy="650" r="90" fill="%23d4af37"/></g><g opacity="0.02"><path d="M100,100 Q200,150 300,100" stroke="%23d4af37" stroke-width="1" fill="none"/><path d="M500,200 Q600,250 700,200" stroke="%23d4af37" stroke-width="1" fill="none"/><path d="M150,500 Q250,550 350,500" stroke="%23d4af37" stroke-width="1" fill="none"/></g></svg>');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+        url('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=400&q=60') 10% 20% / 300px no-repeat,
+        url('https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=60') 90% 60% / 280px no-repeat,
+        url('https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&q=60') 5% 80% / 250px no-repeat;
+      opacity: 0.08;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      background:
+        linear-gradient(135deg, rgba(26, 26, 26, 0.92) 0%, rgba(44, 44, 44, 0.92) 100%),
+        url('https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=1600&q=80'),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><pattern id="bamboo" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><line x1="50" y1="0" x2="50" y2="100" stroke="%23d4af37" stroke-width="2" opacity="0.1"/><circle cx="50" cy="20" r="8" fill="%23d4af37" opacity="0.08"/><circle cx="50" cy="50" r="8" fill="%23d4af37" opacity="0.08"/><circle cx="50" cy="80" r="8" fill="%23d4af37" opacity="0.08"/></pattern></defs><rect width="1200" height="400" fill="url(%23bamboo)"/></svg>');
+      background-size: cover;
+      background-position: center;
+      color: var(--cream);
+      text-align: center;
+      padding: 80px 20px 70px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .restaurant-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      margin-bottom: 15px;
+      color: var(--gold);
+      text-transform: uppercase;
+      text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4);
+      position: relative;
+    }
+
+    .restaurant-name::before,
+    .restaurant-name::after {
+      content: '✦';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+      opacity: 0.6;
+    }
+
+    .restaurant-name::before {
+      left: -50px;
+    }
+
+    .restaurant-name::after {
+      right: -50px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--light-gold);
+      font-weight: 300;
+      margin-bottom: 25px;
+    }
+
+    .tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: rgba(250, 248, 243, 0.8);
+      margin: 25px auto 30px;
+      max-width: 600px;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .address {
+      font-size: 0.9rem;
+      color: rgba(250, 248, 243, 0.7);
+      margin-top: 25px;
+      letter-spacing: 0.08em;
+    }
+
+    .contact-bar {
+      background: var(--light-gold);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--gold);
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+
+    .contact-info span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .menu-section {
+      margin-bottom: 70px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      text-align: center;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 40px;
+    }
+
+    .menu-items {
+      display: grid;
+      gap: 30px;
+    }
+
+    .menu-item {
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      padding-bottom: 25px;
+      transition: transform 0.2s ease;
+    }
+
+    .menu-item:hover {
+      transform: translateX(5px);
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 15px;
+      margin-bottom: 8px;
+    }
+
+    .item-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      flex: 1;
+    }
+
+    .item-dots {
+      flex: 1;
+      border-bottom: 1px dotted rgba(107, 107, 107, 0.3);
+      margin: 0 10px 5px;
+    }
+
+    .item-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--gold-dark);
+      white-space: nowrap;
+    }
+
+    .item-description {
+      color: var(--gray);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      font-weight: 300;
+      padding-left: 5px;
+    }
+
+    .hours-section {
+      background: var(--light-gold);
+      padding: 40px;
+      text-align: center;
+      margin: 60px 0;
+      border-top: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .hours-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: var(--charcoal);
+    }
+
+    .hours-text {
+      font-size: 1rem;
+      color: var(--gray);
+      letter-spacing: 0.05em;
+    }
+
+    footer {
+      background: var(--charcoal);
+      color: var(--cream);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: var(--light-gold);
+    }
+
+    .menu-badge {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .menu-badge-inner {
+      display: inline-block;
+      padding: 15px 40px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    .menu-badge-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--cream);
+      letter-spacing: 0.3em;
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 50px 20px 40px;
+      }
+
+      .restaurant-name {
+        font-size: 2.5rem;
+      }
+
+      .restaurant-name::before,
+      .restaurant-name::after {
+        display: none;
+      }
+
+      .subtitle {
+        font-size: 0.85rem;
+        letter-spacing: 0.2em;
+      }
+
+      .tagline {
+        font-size: 1.1rem;
+      }
+
+      .item-header {
+        flex-wrap: wrap;
+      }
+
+      .item-dots {
+        display: none;
+      }
+
+      .contact-info {
+        gap: 20px;
+        font-size: 0.8rem;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+
+      .menu-badge {
+        margin-bottom: 35px;
+      }
+
+      .menu-badge-inner {
+        padding: 12px 25px;
+      }
+
+      .menu-badge-text {
+        font-size: 0.95rem;
+        letter-spacing: 0.2em;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .hours-section {
+        padding: 30px 20px;
+      }
+
+      body::before {
+        background:
+          radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .restaurant-name {
+        font-size: 2rem;
+        letter-spacing: 0.1em;
+      }
+
+      .subtitle {
+        font-size: 0.75rem;
+      }
+
+      .tagline {
+        font-size: 1rem;
+        margin: 20px auto;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .menu-badge-inner {
+        padding: 10px 20px;
+      }
+
+      .menu-badge-text {
+        font-size: 0.85rem;
+        letter-spacing: 0.15em;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .item-name {
+        font-size: 1.2rem;
+      }
+
+      .item-price {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="restaurant-name">Eastern Garden</h1>
+    <p class="subtitle">Chinese Restaurant</p>
+    <p class="tagline">Authentic Chinese Cuisine in the Heart of Portharcourt</p>
+    <p class="address">47 Aba Road, Portharcourt</p>
+  </header>
+
+  <div class="contact-bar">
+    <div class="contact-info">
+      <span>☎ +234 000 000 0000</span>
+      <span>✉ hello@easterngarden.ng</span>
+      <span>⏰ Daily 11:00 AM – 11:00 PM</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="menu-badge">
+      <div class="menu-badge-inner">
+        <p class="menu-badge-text">Our Menu</p>
+      </div>
+    </div>
+
+    <section class="menu-section">
+      <h2 class="section-title">Appetizers</h2>
+      <p class="section-subtitle">To Begin</p>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Spring Rolls</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦3,500</span>
+          </div>
+          <p class="item-description">Crispy vegetable rolls with sweet chili dipping sauce</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Prawn Dumplings</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦5,800</span>
+          </div>
+          <p class="item-description">Steamed crystal dumplings filled with fresh prawns and chives</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Chicken Satay Skewers</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦4,200</span>
+          </div>
+          <p class="item-description">Grilled marinated chicken with peanut sauce</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Crispy Wontons</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦3,800</span>
+          </div>
+          <p class="item-description">Golden fried wontons stuffed with pork and vegetables</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2 class="section-title">Soups</h2>
+      <p class="section-subtitle">Warm & Nourishing</p>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Hot & Sour Soup</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦3,200</span>
+          </div>
+          <p class="item-description">Traditional spicy and tangy broth with tofu and mushrooms</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Egg Drop Soup</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦2,800</span>
+          </div>
+          <p class="item-description">Silky chicken broth with delicate egg ribbons</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Wonton Soup</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦4,500</span>
+          </div>
+          <p class="item-description">Clear broth with handmade pork wontons and bok choy</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2 class="section-title">Main Courses</h2>
+      <p class="section-subtitle">Our Signatures</p>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Sweet & Sour Chicken</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦7,500</span>
+          </div>
+          <p class="item-description">Crispy chicken tossed in tangy sweet and sour sauce with bell peppers</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Kung Pao Shrimp</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦9,800</span>
+          </div>
+          <p class="item-description">Wok-tossed prawns with peanuts, dried chilies, and Sichuan peppercorns</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Peking Duck (Half)</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦13,500</span>
+          </div>
+          <p class="item-description">Crispy skin duck served with pancakes, scallions, and hoisin sauce</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Beef with Broccoli</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦8,200</span>
+          </div>
+          <p class="item-description">Tender beef strips with fresh broccoli in savory oyster sauce</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">General Tso's Chicken</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦7,800</span>
+          </div>
+          <p class="item-description">Crispy fried chicken in a sweet and spicy glaze</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Szechuan Spicy Fish</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦10,500</span>
+          </div>
+          <p class="item-description">Fresh fish fillet in fiery Szechuan chili oil with vegetables</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Mongolian Beef</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦8,800</span>
+          </div>
+          <p class="item-description">Sliced beef with scallions in sweet soy-based sauce</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Ma Po Tofu</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦6,200</span>
+          </div>
+          <p class="item-description">Silken tofu in spicy chili bean sauce with minced pork</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2 class="section-title">Rice & Noodles</h2>
+      <p class="section-subtitle">From the Wok</p>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Yangzhou Fried Rice</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦5,500</span>
+          </div>
+          <p class="item-description">Classic fried rice with shrimp, chicken, egg, and vegetables</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Beef Chow Mein</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦6,800</span>
+          </div>
+          <p class="item-description">Stir-fried noodles with beef and mixed vegetables</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Singapore Noodles</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦6,500</span>
+          </div>
+          <p class="item-description">Curry-spiced rice noodles with shrimp and vegetables</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Dan Dan Noodles</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦5,800</span>
+          </div>
+          <p class="item-description">Spicy Sichuan noodles with minced pork and peanut sauce</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Vegetable Fried Rice</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦4,200</span>
+          </div>
+          <p class="item-description">Wok-tossed rice with seasonal vegetables and egg</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2 class="section-title">Desserts</h2>
+      <p class="section-subtitle">Sweet Endings</p>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Mango Pudding</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦3,500</span>
+          </div>
+          <p class="item-description">Silky mango pudding topped with fresh fruit</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Deep Fried Ice Cream</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦4,200</span>
+          </div>
+          <p class="item-description">Crispy coating with vanilla ice cream center, drizzled with honey</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Sesame Balls</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦3,200</span>
+          </div>
+          <p class="item-description">Golden fried sesame-coated balls with sweet red bean paste</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2 class="section-title">Beverages</h2>
+      <p class="section-subtitle">To Accompany</p>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Jasmine Tea</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦1,800</span>
+          </div>
+          <p class="item-description">Fragrant traditional Chinese tea</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Lychee Juice</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦2,500</span>
+          </div>
+          <p class="item-description">Fresh and sweet tropical lychee juice</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Chinese Beer (Tsingtao)</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦3,500</span>
+          </div>
+          <p class="item-description">Authentic imported Chinese lager</p>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span class="item-name">Soft Drinks</span>
+            <span class="item-dots"></span>
+            <span class="item-price">₦1,500</span>
+          </div>
+          <p class="item-description">Coca-Cola, Sprite, Fanta, or bottled water</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="hours-section">
+      <h3 class="hours-title">Hours of Operation</h3>
+      <p class="hours-text">Open Daily: 11:00 AM – 11:00 PM</p>
+      <p class="hours-text">Dine-In • Takeout • Delivery Available</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Eastern Garden Chinese Restaurant Limited</p>
+    <p>47 Aba Road, Portharcourt, Rivers State</p>
+    <p>Phone: <a href="tel:+2340000000000">+234 000 000 0000</a> | Email: <a href="mailto:hello@easterngarden.ng">hello@easterngarden.ng</a></p>
+    <p style="margin-top: 20px; font-size: 0.75rem; opacity: 0.7;">© 2025 Eastern Garden. All rights reserved.</p>
+  </footer>
+</body>
+</html>
